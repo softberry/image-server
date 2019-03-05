@@ -1,0 +1,11 @@
+{
+  "name": "image-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/softberry/image-server.git",
+  "author": "Emre Sakarya <emre.sakarya@softberry.de>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
