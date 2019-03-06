@@ -1,7 +1,13 @@
-const  express  = require("express");
+const express = require("express");
+const cors = require("cors");
 
 const app = express();
-const  router  = require("./routes");
+const router = require("./routes");
+app.use(
+  cors({
+    origin: [/localhost$/, /(\.|\/)emresakarya.com$/] // allow : all sub domains, http, https from emresakarya.com
+  })
+);
 
 app.use("/memory", router);
 

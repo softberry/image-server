@@ -1,13 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const { ImagesList } = require("../lib");
 
-router.get("/list/:count", (req, res, next) => {
-  ImagesList()
-    .then(files => {
-      res.json(files);
-    })
-    .catch(next);
-});
+router.get("/list/:count", require("./list"));
+router.get("/crop/:width/:height", require("./crop"));
 
 module.exports = router;
