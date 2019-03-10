@@ -5,7 +5,7 @@ const app = express();
 const router = require("./routes");
 app.use(
   cors({
-    origin: [/localhost$/, /(\.|\/)emresakarya.com$/] // allow : all sub domains, http, https from emresakarya.com
+    origin: [/localhost:8080$/, /(\.|\/)emresakarya.com$/] // allow : all sub domains, http, https from emresakarya.com
   })
 );
 
